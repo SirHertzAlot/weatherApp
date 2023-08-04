@@ -1,4 +1,5 @@
 import React, {useState, createRef} from "react";
+import Weather from "./components/Weather";
 
 const App = () => {
   const locationInput = createRef();
@@ -16,16 +17,32 @@ const App = () => {
           }
         }}
       />
-      <div className="result">
-        <div className="place">Bengaluru, India</div>
-        <div className="temperature">27&deg;C</div>
-        <div className="conditions">Partly Cloudy</div>
-        <img
-          src="https://assets.weatherstack.com/images/wsymbols01_png_64/wsymbol_0002_sunny_intervals.png"
-          alt="Partly Cloudy"
+      <Weather location={location} render={({
+        error, 
+        isLoading,
+        icon,
+        place,
+        temperature,
+        conditions
+        }) => !error ? (
+          isLoading ? (
+          <div className="loading">Please wait...</div>
+          ) : (
+            <div className="result">
+              <div className="place">{place}</div>
+              <div className="temperature">{temperature}&deg;C</div>
+              <div className="conditions">{conditions.join(",")}</div>
+              <img
+          src={icon}
+          alt={conditions.join(",")}
           className="icon"
         />
-      </div>
+            </div>
+          )
+        ) : (
+        <div className="error"> There was an error fetching the weather!</div>
+        )} 
+      />
     </div>
   );
 };
