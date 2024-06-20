@@ -68,3 +68,11 @@ Note: Since this is a limited & static database, available locations include Lon
     List of functions to implement:
         - searchLocations(keyword): This function should query /weather/cities/<keyword> and should implement the debounce function from Lodash which is pre-installed. Just import the function using import debounce from "lodash.debounce";
         - getWeather() : This function is invoked whenever the app loads for the first time or whenever the search feature is used to select a new location. This would also be invoked whenever the SetUnits component is used to select a different temperature unit.
+
+# Specifications
+![Alt text](https://dd6i3qlg97048.cloudfront.net/1379d7b2-a6c4-490d-bba1-89ea78e7c6ef-SetUnits-Component.jpg "a title")
+![Alt text](https://dd6i3qlg97048.cloudfront.net/56a018cb-3642-4a18-a9dd-75fbd6393a2e-App-Component.jpg "a title")
+![Alt text](https://d11ldeo2m6pbdo.cloudfront.net/d4261f15-82bc-4a40-a428-134414aa3921-image-2-.png "a title")
+![Alt text](https://dd6i3qlg97048.cloudfront.net/9a3d37a6-ccbd-4d7d-89df-8d400ea05abe-SearchResults-Component.jpg " ")
+![Alt text](https://dd6i3qlg97048.cloudfront.net/1379d7b2-a6c4-490d-bba1-89ea78e7c6ef-SetUnits-Component.jpg " ")
+
